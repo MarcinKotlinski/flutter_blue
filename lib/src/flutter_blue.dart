@@ -99,8 +99,8 @@ class FlutterBlue {
     var settings = protos.ScanSettings.create()
       ..androidScanMode = scanMode.value
       ..allowDuplicates = allowDuplicates
-      ..serviceUuids.addAll(withServices.map((g) => g.toString()).toList())
-      ..serviceUuids.addAll(withDevices.map((g) => g.toString()).toList());
+      ..serviceUuids.addAll(withDevices.map((g) => g.toString()).toList())
+      ..serviceUuids.addAll(withServices.map((g) => g.toString()).toList());
     if (_isScanning.value == true) {
       throw Exception('Another scan is already in progress.');
     }
